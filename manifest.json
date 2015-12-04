@@ -1,0 +1,18 @@
+{
+    "name": "EasyFF",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Gotta add'em all!",
+    "permissions": ["tabs", "http://*/*", "http://*/"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.prisync.com/admin/fetchField/site?site_id=*"],
+      "js": ["content.js"]
+    },  
+    {
+      "matches": ["http://urlcheck.prisync.net/*"],
+      "js": ["content2.js"]
+    }
+  ],
+    "web_accessible_resources": ["script.js","script2.js"]
+}
